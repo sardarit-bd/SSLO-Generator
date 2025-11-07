@@ -1,26 +1,44 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --brandBlue: #0b66c3;
+  --brandBlueLight: #1b8cff;
+  --brandLight: #eaf4ff;
+  --brandInk: #0f1a24;
+  --brandMuted: #5f6a6e;
+  --brandLine: #e6ecef;
+  --brandBg: #ffffff;
+  --brandFooter: #020a26;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: var(--brandBg);
+  color: var(--brandInk);
+}
+
+.brandBg {
+  background-color: var(--brandBlue);
+}
+
+.brandColor {
+  color: var(--brandBlue);
+}
+
+.btn {
+  @apply px-4 py-2 rounded-md font-semibold transition;
+}
+
+.btn-primary {
+  background-color: var(--brandBlue);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--brandBlueLight);
+}
+
+.card {
+  @apply bg-white border border-[var(--brandLine)] rounded-xl p-6 shadow-sm;
 }
