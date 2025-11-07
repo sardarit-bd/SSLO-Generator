@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-[var(--brandFooter)] text-white mt-20">
       <div className="container mx-auto grid md:grid-cols-4 gap-8 px-6 py-16">
         <div>
-          <Image src="/footerLogo.png" alt="SOLVED" width={120} height={40} />
+          <Image src="/footerLogo.png" alt="SOLVED" width={220} height={80} />
           <p className="mt-3 text-sm text-gray-300">
             We don’t just solve problems. We build pathways to possibility.
           </p>

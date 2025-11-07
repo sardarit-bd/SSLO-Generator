@@ -1,17 +1,25 @@
+const BASE_URL = "https://silved-education-backend-code.vercel.app";
+
 export const generateSSLO = async (payload) => {
   try {
-    const res = await fetch(
-      "https://silved-education-backend-code.vercel.app/api/sslo/generate",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      }
-    );
-    const data = await res.json();
-    return data;
+    const res = await fetch(`${BASE_URL}/api/sslo/generate`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    return await res.json();
   } catch (err) {
-    console.error("SSLO API Error:", err);
-    return { success: false, message: "Server connection failed" };
+    console.error("generateSSLO error:", err);
+    return { success: false, message: "Network error" };
+  }
+};
+
+export const getAllObjectives = async () => {
+  try {
+    const res = await fetch(`${BASE_URL}/allproducts`);
+    return await res.json();
+  } catch (err) {
+    console.error("getAllObjectives error:", err);
+    return { success: false, data: [] };
   }
 };

@@ -14,37 +14,37 @@ export default function Header() {
       <div className="container mx-auto flex items-center justify-between px-6 py-6">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="https://solved-llc.com" className="flex items-center gap-2">
             <Image
               src="/logo-2-scaled.png"
               alt="SOLVED"
-              width={120}
-              height={40}
+              width={220}
+              height={80}
               priority
             />
           </Link>
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8 text-[var(--brandInk)] font-medium">
-          <Link href="/" className="hover:text-[var(--brandColor)] transition">
+        <nav className="hidden md:flex items-center text-lg gap-8 text-[var(--brandInk)] font-bold">
+          <Link href="https://solved-llc.com" className="hover:text-[var(--brandColor)] transition">
             Home
           </Link>
-          <Link href="/solutions" className="hover:text-[var(--brandColor)] transition">
+          <Link href="https://solved-llc.com/solutions" className="hover:text-[var(--brandColor)] transition">
             Solutions
           </Link>
-          <Link href="/about" className="hover:text-[var(--brandColor)] transition">
+          <Link href="https://solved-llc.com/about" className="hover:text-[var(--brandColor)] transition">
             About us
           </Link>
-          <Link href="/resources" className="hover:text-[var(--brandColor)] transition">
+          <Link href="https://solved-llc.com/resources" className="hover:text-[var(--brandColor)] transition">
             Resources
           </Link>
         </nav>
 
         {/* CTA button (desktop) */}
-        <div className="hidden md:block">
+        <div className="hidden text-lg md:block">
           <Link
-            href="/contact"
+            href="https://solved-llc.com/#contact"
             className="bg-[var(--brandBlue)] text-white px-5 py-2 rounded-md shadow hover:opacity-90 transition"
           >
             Get Started
